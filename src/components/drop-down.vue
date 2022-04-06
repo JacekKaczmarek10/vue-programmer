@@ -1,9 +1,9 @@
 <template>
   <select name="dropdown" id="dropdown" v-model="selectedOption" v-on:change="optionChanged" @change="optionChanged">
-    <option value="null" disabled>Please select option</option>
-    <option value="0">Option 2</option>
-    <option value="1">Option 2</option>
-    <option value="2">Option 3</option>
+    <option value="null" disabled>Select number of pizza</option>
+    <option value="0">1 stock</option>
+    <option value="1">2 stock</option>
+    <option value="2">3 stock</option>
   </select>
 </template>
 

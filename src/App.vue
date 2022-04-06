@@ -4,6 +4,7 @@
   </div>
 
   <Welcome></Welcome>
+  <Cars></Cars>
   <ClickCounter2></ClickCounter2>
   <ClickCounter2></ClickCounter2>
   <ClickCounter2></ClickCounter2>
@@ -19,13 +20,16 @@
     <PlanNotepad name="Tuesday"></PlanNotepad>
     <PlanNotepad name="Wednesday"></PlanNotepad>
   </div>
-  <PlanNotepad v-bind:key="plan" v-for="plan in plans" :name="plan"></PlanNotepad>
   <PlanNotepad></PlanNotepad>
   <plan-picker></plan-picker>
   <br>
   <br>
   <h1>List</h1>
   <list></list>
+  <br>
+  <br>
+  <h1>Slots</h1>
+  <Card></Card>
 </template>
 
 <script>
@@ -35,6 +39,8 @@ import PlanNotepad from "@/components/plan-notepad";
 import Welcome from "@/components/welcome";
 import PlanPicker from "@/components/plan-picker";
 import List from "@/components/List";
+import Cars from "@/components/Cars";
+import Card from "@/components/Card";
 
 // var vm = new Vue({
 //   el: '#app',
@@ -44,6 +50,8 @@ import List from "@/components/List";
 export default {
   name: 'App',
   components: {
+    Card,
+    Cars,
     List,
     PlanPicker,
     PlanNotepad,
@@ -51,11 +59,7 @@ export default {
     ClickCounter2,
     Welcome,
   },
-  data() {
-    return {
-      plans: [55,67]
-    }
-  }
+
 }
 </script>
 

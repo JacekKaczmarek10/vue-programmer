@@ -1,7 +1,7 @@
 <template>
   <div>
-    <p v-text="dropdownResult"></p>
-
+    <h1> Chose pizza number</h1>
+    <p v-text="dropdownResult.value"></p>
     <Dropdown @update:option="optionUpdate"></Dropdown>
   </div>
 </template>
@@ -19,14 +19,19 @@ export default {
 
   methods:{
     optionUpdate: function (value){
-      this.dropdownResult = value;
+      this.dropdownResult.value = value;
       console.log(value)
     }
   },
 
   data: function (){
     return {
-        dropdownResult: '',
+        dropdownResult: {
+          type: Number,
+          required: true,
+          defaultValue: 0,
+          value : 0
+        }
     }
   }
 }
